@@ -1,16 +1,17 @@
 package com;
 
+import java.util.*;
+
 public class MyApp {
-    static int[] arr = new int[20];
+    static int[] arr = new int[10];
     static int count = 0;
 
     public static void main(String[] args) {
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; ) {
             arr[i] = ++i;
         }
-//        firstMethod();
-//        secondMethod(10);
-        theerdMethod(arr);
+        Arrays.stream(arr).forEach(System.out::println);
+        fourthMethod(arr);
     }
 
     public static void firstMethod() {
@@ -64,6 +65,20 @@ public class MyApp {
         }
         System.out.println(counter);
         System.out.println(arr[counter]);
+    }
+
+    public static void fourthMethod(int[] arr) {
+        for (int i : arr) {
+            if (count > 7) {
+                break;
+            }
+            if (i > 4) {
+                arr[count] = i + 1;
+            }
+            count++;
+        }
+        Arrays.stream(arr)
+                .forEach(System.out::println);
     }
 }
 
