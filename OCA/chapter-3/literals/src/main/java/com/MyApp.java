@@ -9,8 +9,8 @@ public class MyApp {
     private int i = (int) d;
 
     public static void main(String[] args) {
-        MyApp app = new MyApp();
-        System.out.println(app.toString());
+        SizeOfLiter sizeOfLiter = new SizeOfLiter();
+        System.out.println(sizeOfLiter.toString());
     }
 
     @java.lang.Override
