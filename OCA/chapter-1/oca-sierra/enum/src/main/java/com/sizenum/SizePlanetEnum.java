@@ -1,5 +1,5 @@
 package com.sizenum;
 
-enum PlanetSize {
+enum PlanetSizeEnum {
 
 }
