@@ -1,5 +1,5 @@
 package com;
 
 interface Foo {
-    boolean doFooStuff();
+    abstract boolean doFooStuff();
 }

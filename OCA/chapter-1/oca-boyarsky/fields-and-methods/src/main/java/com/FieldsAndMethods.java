@@ -1,35 +1,67 @@
 package com;
 
 public class FieldsAndMethods {
-    private int num;
-    private String string;
-
+    private boolean b;
+    private short s;
+    private int i;
+    private long l;
+    private float f;
+    private String text;
     public static void main(String[] args) {
-        FieldsAndMethods fieldsAndMethods = new FieldsAndMethods();
-        fieldsAndMethods.setNum(42);
-        fieldsAndMethods.setString("Hi!");
-        System.out.println(fieldsAndMethods);
+        FieldsAndMethods fam = new FieldsAndMethods();
+        fam.setS((short) 2_147);
+        fam.setI(0x11F);
+        fam.setL(3_123_456_789L);
+        fam.setF((float) 42.24);
+        fam.setText("g");
+        System.out.println(fam.toString());
     }
 
-    public int getNum() {
-        return num;
+    public short getS() {
+        return s;
     }
 
-    public void setNum(int i) {
-        this.num = i;
+    public int getI() {
+        return i;
     }
 
-    public String getString() {
-        return string;
+    public long getL() {
+        return l;
     }
 
-    public void setString(String string) {
-        this.string = string;
+    public void setS(short s) {
+        this.s = s;
     }
 
-    @Override
-    public String toString() {
-        return "num is " + getNum() + "\n" +
-                "string is " + getString();
+    public void setI(int i) {
+        this.i = i;
+    }
+
+    public void setL(long l) {
+        this.l = l;
+    }
+
+    public void setB(boolean b) {
+        this.b = b;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public void setF(float f) {
+        this.f = f;
+    }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "FieldsAndMethods{" +
+                "b=" + b +
+                ", s=" + s +
+                ", i=" + i +
+                ", l=" + l +
+                ", f=" + f +
+                ", text='" + text + '\'' +
+                '}';
     }
 }

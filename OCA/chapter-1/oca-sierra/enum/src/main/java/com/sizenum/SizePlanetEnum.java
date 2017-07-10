@@ -1,5 +1,7 @@
 package com.sizenum;
 
-enum PlanetSizeEnum {
-
+public class SizePlanetEnum {
+   public void printSomething() {
+        System.out.println(new Foo().getI());
+    }
 }
