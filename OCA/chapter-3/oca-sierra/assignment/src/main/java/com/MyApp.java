@@ -1,15 +1,17 @@
 package com;
 
 public class MyApp {
-    static int i = 42;
+    public int i = 0x3d;
+
     public static void main(String[] args) {
-        new MyApp().go(i);
-        System.out.println("hi "+i);
+        MyApp app = new MyApp();
+        app.go(app.i);
+        System.out.println("hi " + app.i);
     }
 
     void go(int x) {
-        for (int j = 0; j < 3; j++) {
-            int x = ++j;
+        for (int j = 0; j < 3; ) {
+            x = ++j;
         }
         System.out.println(x);
     }
