@@ -1,20 +1,27 @@
 package com;
 
-public class Main {
+import com.util.*;
 
+public class Main {
+    Size size;
+
+    public Main(Size i) {
+        this.size = i;
+    }
     public static void main(String... args) {
-        final int a = 42;
-        final int b = 23;
-        int check = 42;
-        switch (check) {
-            case a:
-                System.out.println("A");
+        Main m = new Main(Size.SMALL);
+        switch (m.size) {
+            case BIG:
+                System.out.println("big");
+                System.out.println(m.size.getSize());
                 break;
-            case 5:
-                System.out.println("Match");
+            case SMALL:
+                System.out.println("small");
+                System.out.println(m.size.getSize());
                 break;
-            case b:
-                System.out.println("B");
+            case MID:
+                System.out.println("mid");
+                System.out.println(m.size.getSize());
                 break;
             default:
                 System.out.println("Default");

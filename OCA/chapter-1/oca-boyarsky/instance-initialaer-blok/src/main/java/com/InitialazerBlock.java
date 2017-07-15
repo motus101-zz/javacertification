@@ -3,6 +3,10 @@ package com;
 import com.foo.*;
 
 public class InitialazerBlock extends SuperClass {
+    static {
+        System.out.println("From static block!____");
+    }
+
     private int number;
     private String string;
 
@@ -13,9 +17,7 @@ public class InitialazerBlock extends SuperClass {
         string = "Forty two!";
         System.out.println(toString());
     }
-    static {
-        System.out.println("From static block!____");
-    }
+
     public InitialazerBlock() {
         System.out.println(this);
         System.out.println("Hi from constructor!");
