@@ -1,18 +1,31 @@
 package com;
 
-<<<<<<< HEAD
 public class Main {
     public static void main(String... args) {
+        String a = "";
+        a += "For ";
+        a += "test";
+        String c = "For test";
+        StringBuilder b = new StringBuilder(c);
 
-=======
-import com.foo.*;
-
-public class Main {
-    public static void main(String... args) {
-        Immutable im = new Immutable();
-        im.i = 24;
-        System.out.println(im.i);
-        System.out.println(im.getI());
->>>>>>> e420a6de2233d8277aea79cf5034adfd405e9de1
+        System.out.println("_____");
+//        ---
+        if (a == "For test") {
+            System.out.println(" a == For test");
+        } else {
+            System.out.println(" a != For test");
+        }
+//        ---
+        if (c.equals("For test")) {
+            System.out.println("c equals For test");
+        } else {
+            System.out.println("c don't equals For test");
+        }
+//        ---
+        if (c.equals(b)) {
+            System.out.println("c equals b");
+        } else {
+            System.out.println("c don't equals b");
+        }
     }
 }
