@@ -2,12 +2,10 @@ package com;
 
 public class MyApp {
     public static void main(String[] args) {
-        int b = 14;
-
-        if (b < 14)
-            System.out.println("Hi");
-        if (b > 14)
-            System.out.println("Second if");
-        else System.out.println("three");
+        String s = "null";
+        if (s == null)
+            System.out.println("s is null");
+        else
+            System.out.printf("Name of class is %s \n", s.getClass().getName());
     }
 }
