@@ -8,28 +8,34 @@ public class Main {
         Main m2 = m;
         String st1 = "Hi!";
         String st2 = "Hi!";
+
         // Primitives
-        int i = 10;
+
+        short sh = 255;
+        int i = 255;
         int b = 42;
-        // Primitives
-        if ((i < 11) | (++b > 42)) {
+
+        Integer aInt = i;
+        Boolean bl = aInt instanceof Number;
+        System.out.println(bl);
+
+        long l = 3_0000;
+        float f = 255.000f;
+
+        if (i == b) {
             System.out.println("True");
         } else {
             System.out.println("False");
         }
-        // Objects
-        if (m == m2) {
-            System.out.println("True");
+        if (sh == f) {
+            System.out.println("True float");
+
         } else {
             System.out.println("False");
         }
-        // String
-        if (st1 != st2)
-            System.out.println("True");
-        else
-            System.out.println("False");
-        System.out.println("True anyway");
+
     }
+
     public void doSomething() {
 
     }

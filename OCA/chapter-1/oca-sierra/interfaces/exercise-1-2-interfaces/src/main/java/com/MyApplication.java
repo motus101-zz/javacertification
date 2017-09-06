@@ -1,9 +1,13 @@
 package com;
 
 public class MyApplication implements Buzz {
+   public int i = 24;
     public static void main(String[] args) {
         MyApplication app = new MyApplication();
         app.doBuzzStuff();
+        System.out.println(((Buzz) app).i);
+        System.out.println(app.returnValue());
+        System.out.println(Buzz.returnBarValue());
     }
 
    public boolean doFooStuff() {

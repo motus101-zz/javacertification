@@ -3,6 +3,7 @@ package com.animal;
 import static java.lang.System.*;
 
 public abstract class Animal {
+    public int anInt = 42;
 
     public abstract void prefFood();
 

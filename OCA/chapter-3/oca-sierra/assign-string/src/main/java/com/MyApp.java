@@ -1,12 +1,40 @@
 package com;
 
 public class MyApp {
+    private String a = "String";
+    private String b = "String";
+
     public static void main(String[] args) {
-        String s1 = "String one";
-//        String s2 = "String two";
-        String s2 = s1.toUpperCase();
-        System.out.println("s1 - " + s1 + "\n" + "s2 - " + s2 + "\n");
-//        s2.toLowerCase();
-        System.out.println("s1 - " + s1 + "\n" + "s2 - " + s2 + "\n");
+        MyApp app = new MyApp();
+        app.concatenation();
+    }
+
+    void concatenation() {
+        System.out.println("b" + 'a' + 100);
+        System.out.println(new Integer(100) + 'a');
+
+        Integer i = 6;
+        System.out.println(i);
+    }
+
+    void checkEqual(String a1, String b1) {
+        String str1 = new String("Test");
+        String str2 = new String("Test");
+        System.out.println("str1 == str2  is - " + (str1 == str2));
+        System.out.println("str1 equals str2  is - " + (str1.equals(str2)));
+
+        System.out.println("a == b  is - " + (a1 == b1));
+        System.out.println("a.replace(g,g) == b  is - " + (a1.replace('g', 'g') == b1));
+        System.out.println("a.replace(g,g) == b.replace(g,g)  is - " + (a1.replace('g', 'g') == b1.replace('g', 'g')));
+        System.out.println("a.replace(g,G) == b.replace(g,G)  is - " + (a1.replace('g', 'G') == b1.replace('g', 'G')));
+        System.out.println("a.replace(g,G) == StrinG)  is - " + (a1.replace('g', 'G') == "StrinG"));
+    }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "MyApp{" +
+                "a='" + a + '\'' +
+                ", b='" + b + '\'' +
+                '}';
     }
 }

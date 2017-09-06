@@ -1,11 +1,14 @@
 package com;
 
 import com.animal.*;
+import com.util.*;
 
 public class MyApp {
     public static void main(String[] arg) {
-        Animal horse = new Horse();
-        horse.makeSound("bark");
-        horse.prefFood();
+        Horse horse = new Horse();
+            horse.setAnInt(100);
+            System.out.println(horse.getAnInt());
+            horse.makeSound("bark");
+            horse.prefFood();
     }
 }

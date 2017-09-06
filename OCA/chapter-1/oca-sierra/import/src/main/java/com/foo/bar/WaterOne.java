@@ -1,8 +1,8 @@
 package com.foo.bar;
 
-public class Water {
+public class WaterOne{
     public static int NUMBER = 42;
-    public void doThing(int i) {
+    public static void doThing(int i) {
         System.out.println("Hi from Bar - " +
                 i);
     }

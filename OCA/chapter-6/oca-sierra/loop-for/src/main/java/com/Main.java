@@ -1,34 +1,55 @@
 package com;
 
+import java.util.*;
+
 public class Main {
+    private List<Integer> list = new ArrayList<>();
+    private Map<Integer, String> map = new HashMap<>();
+    private int[][] multidementional_array = new int[][]{{1, 7, 2}, {5, 42, 10}, {12, 11, 32}};
+    private int[] array = new int[10];
+
     public static void main(String... args) {
-        int[][] array = new int[][]{{1, 7, 2}, {5, 42, 10}, {12, 11, 32}};
-        testForLoop(20);
-        testBreakContinue(array);
-        System.out.println("Exit!");
+        Main main = new Main();
+        main.testForLoop(main.multidementional_array);
+        System.out.println("Done!");
     }
 
-    static void testForLoop(int i) {
-        FIRST:
-        for (int j = 0; ++j < i; ) {
-            if (j == 10)
-                return;
-            System.out.println("J - is " + j);
-        }
-
-        System.out.println("Second");
+    public Main() {
+        fillList(this.list);
     }
 
-    static void testBreakContinue(int[][] arr) {
-        int count = 0;
-        INNER:
-        for (int[] ints : arr) {
-            System.out.println("Loop - " + ++count);
-            for (int i = 0; i < ints.length; i++) {
-                if (ints[i] == 7) break;
-                if (ints[i] == 42) break;
-                System.out.println("Inner loop. Number - " + ints[i]);
+    public void testForLoop(int[][] array) {
+        int i = 0;
+        first:
+        for (; i < array.length; i++) {
+            for (int a : array[i]) {
+                if (a == 12) break first;
+                System.out.println(a);
             }
+        }
+        System.out.println("i is " + i);
+        while (i >= 1) {
+            if (i == 2) {
+                System.out.println(i);
+                break;
+            }
+            i--;
+        }
+    }
+
+    public void testBreakContinue(List<Integer> list) {
+    }
+
+    public void testEnhancedFor(List<Integer> array) {
+        for (Integer i : array) {
+            System.out.println(i);
+        }
+    }
+
+    private void fillList(List<Integer> list) {
+        Random random = new Random();
+        for (int count = 0; count < 10; count++) {
+            list.add(random.nextInt(20));
         }
     }
 }

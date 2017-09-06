@@ -1,7 +1,7 @@
 package com.foo;
 
-public class SuperClass {
-    void doSuperClassStuff() {
+public class SuperClass implements MyInterface {
+    public void doSuperClassStuff() {
         System.out.println("Hi from SuperClass!");
     }
 }

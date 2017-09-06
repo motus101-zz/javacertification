@@ -1,29 +1,38 @@
 package com;
 
-public class MyApp {
-    private byte aByte = 120;
-    private short aShort = 32000;
-    private int anInt = 200000;
-    private long aLong = 8890099;
+import com.foo.*;
 
-    private float aFloat = 127.2F;
-    private double aDouble = 127.3;
+public class MyApp {
+    private char aChar = 'a';
+    private byte aByte = 12 + 7;
+    private short aShort = 45 + 45;
+    private int anInt = 172;
+    private long aLong = 1_000_000_000_000L;
+
+    private float aFloat = -2 * (float)1.5;
+    private double aDouble = -3_000;
+
+    private String string = "String";
 
     public static void main(String[] args) {
         MyApp app = new MyApp();
-        app.aByte = 120 + 5;
-        System.out.println(app.toString());
+
+        SomeClass sc = new SomeClass();
+        float b = sc.getA();
+        System.out.println(b);
     }
 
     @java.lang.Override
     public java.lang.String toString() {
         return "MyApp{" +
-                "aByte=" + aByte +
+                "aChar=" + aChar +
+                ", aByte=" + aByte +
                 ", aShort=" + aShort +
                 ", anInt=" + anInt +
                 ", aLong=" + aLong +
                 ", aFloat=" + aFloat +
                 ", aDouble=" + aDouble +
+                ", string='" + string + '\'' +
                 '}';
     }
 }
