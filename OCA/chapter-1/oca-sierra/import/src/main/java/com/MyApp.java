@@ -1,6 +1,5 @@
 package com;
 
-import static com.foo.WaterTwo.*;
 
 public class MyApp {
     public static void main(String[] args) {

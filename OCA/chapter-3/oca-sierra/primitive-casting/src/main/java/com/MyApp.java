@@ -3,23 +3,21 @@ package com;
 import com.foo.*;
 
 public class MyApp {
+//  dec
     private char aChar = 'a';
-    private byte aByte = 12 + 7;
-    private short aShort = 45 + 45;
+    private byte aByte = 127;
+    private short aShort = (short)(aByte + 45);
     private int anInt = 172;
     private long aLong = 1_000_000_000_000L;
-
-    private float aFloat = -2 * (float)1.5;
+//  float
+    private float aFloat = 1.5f;
     private double aDouble = -3_000;
-
+//  string
     private String string = "String";
 
     public static void main(String[] args) {
         MyApp app = new MyApp();
-
-        SomeClass sc = new SomeClass();
-        float b = sc.getA();
-        System.out.println(b);
+        System.out.println(app.toString());
     }
 
     @java.lang.Override

@@ -1,15 +1,16 @@
 package com.util;
 
-import com.util.exceptions.*;
+public class ClassA implements SomeInterface {
+    public short a = 42;
 
-public class ClassA {
-    public int a = 42;
-
-    public ClassA() {
-        throw new MyExceptionClass();
+    public void printStaticMemb() {
+        System.out.println(SomeInterface.a1);
+    }
+    public void printM() {
+        System.out.println("Hi from super class!");
     }
 
-    public final void print() {
-        System.out.println("Hi from super class!");
+    public int getA() {
+        return a;
     }
 }

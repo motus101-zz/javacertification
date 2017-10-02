@@ -3,7 +3,6 @@
     "",
     "\\OCA",
     "\\OCA\\chapter-1",
-    "\\OCA\\chapter-1\\oca-boyarsky\\fields-and-methods",
     "\\OCA\\chapter-1\\oca-sierra",
     "\\OCA\\chapter-1\\oca-sierra\\import",
     "\\OCA\\chapter-1\\oca-sierra\\import\\src",
@@ -11,6 +10,6 @@
     "\\OCA\\chapter-1\\oca-sierra\\import\\src\\main\\java",
     "\\OCA\\chapter-1\\oca-sierra\\import\\src\\main\\java\\com"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\OCA\\chapter-1\\oca-sierra\\import\\src\\main\\java\\com\\MyApp.java",
   "PreviewInSolutionExplorer": false
 }
